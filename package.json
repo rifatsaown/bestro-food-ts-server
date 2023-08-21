@@ -6,7 +6,6 @@
   "license": "MIT",
   "types": "modules",
   "scripts": {
-    "prestart": "tsc -p .",
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc -p ."
