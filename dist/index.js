@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("dotenv/config");
+require('dotenv').config();
 const app_1 = __importDefault(require("./app"));
 const dbConnect_1 = require("./utils/dbConnect");
 const port = process.env.PORT || 5000;

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDbConnection = exports.connectToDatabase = void 0;
-require("dotenv/config");
+require('dotenv').config();
 const mongodb_1 = require("mongodb");
 const uri = process.env.MONGODB_URI;
 let dbConnection = null; // connection to the database is stored here once it is established the first time 
