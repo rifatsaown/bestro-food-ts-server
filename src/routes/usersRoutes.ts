@@ -8,7 +8,7 @@ const router = express.Router();
 //Get all users
 router.route("/")
     .get(verifyJwt, verifyAdmin , getAllUsers)
-    .post(verifyJwt,verifyAdmin,addUser)
+    .post(addUser)
 
 /*-----Admin Routes ------*/
 // Find user admin or not

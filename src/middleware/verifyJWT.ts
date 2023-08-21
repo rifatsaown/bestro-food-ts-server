@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
 export const verifyJwt = async (req: Request, res: Response, next: NextFunction) => {
@@ -8,6 +8,7 @@ export const verifyJwt = async (req: Request, res: Response, next: NextFunction)
     }
     // Bearer token cut from header
     const token = authHeader.split(' ')[1];
+    
     jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user) => {
         if (err) {
             return res.status(403).send({ status: 'error', message: 'Unauthorized Access' });
