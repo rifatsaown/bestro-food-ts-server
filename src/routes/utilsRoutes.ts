@@ -1,4 +1,5 @@
 import { ObjectIdLike } from 'bson';
+require('dotenv').config();
 import express from 'express';
 import { ObjectId } from 'mongodb';
 import { verifyAdmin } from '../middleware/verifyAdmin';
